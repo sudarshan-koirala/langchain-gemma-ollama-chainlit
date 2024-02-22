@@ -39,7 +39,7 @@ Create a virtualenv and activate it
 
 4. Run the following command in your terminal to start the chat UI:
    ```
-   chainlit run langchain_gemma-ollama.py
+   chainlit run langchain-gemma-ollama.py
    ```
 
 ## Disclaimer
