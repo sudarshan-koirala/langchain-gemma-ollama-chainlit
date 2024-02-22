@@ -1,12 +1,10 @@
-# langchain-falcon-chainlit
+# langchain-gemma-ollama-chainlit
 Simple Chat UI using Falcon model, LangChain and Chainlit
 
-### [Youtube Video Covering this GitHub Repo](https://youtu.be/gnyUUY8X-G4?si=aUCMZ0RBUQHYIp9b)
-
 ### Open Source in Action 🚀
-- [Falcon](https://falconllm.tii.ae/) as Large Language model
-- [LangChain](https://python.langchain.com/en/latest/modules/models/llms/integrations/huggingface_hub.html) as a Framework for LLM
-- [Falcon model](https://huggingface.co/tiiuae/falcon-7b-instruct) from Huggingface Website
+- [Gemma](https://ai.google.dev/gemma/docs/model_card) as Large Language model via [Ollama](https://ollama.com/)
+- [LangChain](https://www.langchain.com/) as a Framework for LLM
+- [LangSmith](https://smith.langchain.com/) for developing, collaborating, testing, deploying, and monitoring LLM applications.
 - [Chainlit](https://docs.chainlit.io/langchain) for deploying.
 
 ## System Requirements
@@ -22,22 +20,17 @@ Create a virtualenv and activate it
 
 1. Fork this repository and create a codespace in GitHub as I showed you in the youtube video OR Clone it locally.
    ```
-   git clone https://github.com/sudarshan-koirala/langchain-falcon-chainlit.git
-   cd langchain-falcon-chainlit
+   git clone https://github.com/sudarshan-koirala/langchain-gemma-ollama-chainlit.git
+   cd langchain-gemma-ollama-chainlit
    ```
 
-2. Rename example.env to .env with `cp example.env .env`and input the huggingfacehub api token as follows. Get Huggingfacehub api token from this [URL](https://huggingface.co/settings/tokens). You need to create an account in Huggingface if you haven't already.
+2. OPTIONAL - Rename example.env to .env with `cp example.env .env`and input the environment variables from [LangSmith](https://smith.langchain.com/). You need to create an account in LangSmith website if you haven't already.
+   ``` 
+   LANGCHAIN_TRACING_V2=true
+   LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
+   LANGCHAIN_API_KEY="your-api-key"
+   LANGCHAIN_PROJECT="your-project"
    ```
-   HUGGINGFACEHUB_API_TOKEN=your_huggingface_token
-   ```
-
-   OPTIONAL - If you want to use LangSmith. Get this [URL](https://smith.langchain.com/). You need to create an account in LangSmith website if you haven't already. 
-      ```
-      LANGCHAIN_TRACING_V2=true
-      LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
-      LANGCHAIN_API_KEY="your-api-key"
-      LANGCHAIN_PROJECT="your-project"
-      ```
 
 3. Run the following command in the terminal to install necessary python packages:
    ```
@@ -46,8 +39,7 @@ Create a virtualenv and activate it
 
 4. Run the following command in your terminal to start the chat UI:
    ```
-   chainlit run langchain_falcon.py --no-cache -w
-   chainlit run langchain_falcon_langsmith.py --no-cache -w
+   chainlit run langchain_gemma-ollama.py
    ```
 
 ## Disclaimer
