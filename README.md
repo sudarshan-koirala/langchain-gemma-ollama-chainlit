@@ -1,5 +1,5 @@
 # langchain-gemma-ollama-chainlit
-Simple Chat UI using Falcon model, LangChain and Chainlit
+Simple Chat UI using Gemma model via Ollama, LangChain and Chainlit
 
 ### Open Source in Action 🚀
 - [Gemma](https://ai.google.dev/gemma/docs/model_card) as Large Language model via [Ollama](https://ollama.com/)
