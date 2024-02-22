@@ -11,11 +11,6 @@ Simple Chat UI using Gemma model via Ollama, LangChain and Chainlit
 
 You must have Python 3.10 or later installed. Earlier versions of python may not compile.
 
-Create a virtualenv and activate it
-   ```
-   python3 -m venv .venv && source .venv/bin/activate
-   ```
-
 ## Steps to Replicate 
 
 1. Fork this repository and create a codespace in GitHub as I showed you in the youtube video OR Clone it locally.
@@ -24,7 +19,12 @@ Create a virtualenv and activate it
    cd langchain-gemma-ollama-chainlit
    ```
 
-2. OPTIONAL - Rename example.env to .env with `cp example.env .env`and input the environment variables from [LangSmith](https://smith.langchain.com/). You need to create an account in LangSmith website if you haven't already.
+2. Create a virtualenv and activate it
+   ```
+   python3 -m venv .venv && source .venv/bin/activate
+   ```
+
+3. OPTIONAL - Rename example.env to .env with `cp example.env .env`and input the environment variables from [LangSmith](https://smith.langchain.com/). You need to create an account in LangSmith website if you haven't already.
    ``` 
    LANGCHAIN_TRACING_V2=true
    LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
@@ -32,12 +32,12 @@ Create a virtualenv and activate it
    LANGCHAIN_PROJECT="your-project"
    ```
 
-3. Run the following command in the terminal to install necessary python packages:
+4. Run the following command in the terminal to install necessary python packages:
    ```
    pip install -r requirements.txt
    ```
 
-4. Run the following command in your terminal to start the chat UI:
+5. Run the following command in your terminal to start the chat UI:
    ```
    chainlit run langchain_gemma_ollama.py
    ```
